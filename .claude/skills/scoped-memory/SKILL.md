@@ -121,6 +121,26 @@ grep -r "keyword" ~/.claude-memories/
 grep -r "keyword" ~/.claude-memories/{scope}/
 ```
 
+## Retrieving Memories
+
+To retrieve saved memories in other conversations, use the `recall` skill or the following commands:
+
+```bash
+# Recall all memories from a scope (with full content)
+~/.claude/skills/scoped-memory/memory-helper.sh recall {scope}
+
+# Search memories by keyword (with full content)
+~/.claude/skills/scoped-memory/memory-helper.sh recall-search "{keyword}"
+
+# Get recent memories (with full content)
+~/.claude/skills/scoped-memory/memory-helper.sh recall-recent {count}
+
+# Get a summary (titles only)
+~/.claude/skills/scoped-memory/memory-helper.sh summary [scope]
+```
+
+See `RECALL.md` for the full retrieval workflow.
+
 ## Tips
 
 - Use consistent scope names for easier retrieval
